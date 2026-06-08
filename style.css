@@ -1,0 +1,261 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#05070d;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Background */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#00d2ff22,transparent 35%),
+    radial-gradient(circle at bottom right,#3a7bd522,transparent 35%);
+    z-index:-3;
+}
+
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-2;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:-1;
+}
+
+/* Progress */
+#progress{
+    position:fixed;
+    top:0;
+    left:0;
+    height:4px;
+    width:0%;
+    background:linear-gradient(90deg,#00d2ff,#3a7bd5);
+    z-index:9999;
+}
+
+/* Navbar */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(15px);
+    background:rgba(5,7,13,.45);
+    border-bottom:1px solid rgba(255,255,255,.05);
+    z-index:999;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:800;
+}
+
+.links{
+    display:flex;
+    gap:25px;
+}
+
+.links a{
+    color:white;
+    text-decoration:none;
+    opacity:.7;
+    transition:.3s;
+}
+
+.links a:hover{
+    opacity:1;
+    color:#00d2ff;
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    padding:0 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:80px;
+}
+
+.hero-text{
+    max-width:700px;
+}
+
+.title{
+    font-size:5rem;
+    line-height:1;
+}
+
+.title span{
+    background:linear-gradient(90deg,#00d2ff,#3a7bd5);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+    margin-top:20px;
+    opacity:.75;
+    font-size:1.1rem;
+    line-height:1.7;
+}
+
+/* Buttons */
+.buttons{
+    margin-top:35px;
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:14px;
+    background:linear-gradient(90deg,#00d2ff,#3a7bd5);
+    color:white;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 35px rgba(0,210,255,.45);
+}
+
+.btn.ghost{
+    background:transparent;
+    border:1px solid rgba(255,255,255,.2);
+}
+
+/* Profile Card */
+.hero-card{
+    width:320px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    backdrop-filter:blur(20px);
+    text-align:center;
+    padding:30px;
+    box-shadow:0 0 50px rgba(0,210,255,.12);
+    transition:.35s;
+}
+
+.hero-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 60px rgba(0,210,255,.25);
+}
+
+.hero-card img{
+    width:130px;
+    height:130px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #00d2ff;
+    margin-bottom:15px;
+}
+
+.hero-card h3{
+    font-size:1.5rem;
+}
+
+.hero-card p{
+    opacity:.65;
+}
+
+/* Sections */
+.section{
+    padding:120px 8%;
+}
+
+.section h2{
+    font-size:3rem;
+    margin-bottom:35px;
+}
+
+/* Social Grid */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    text-decoration:none;
+    color:white;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    transition:.3s;
+    backdrop-filter:blur(10px);
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 0 40px rgba(0,210,255,.2);
+}
+
+.card i{
+    font-size:2rem;
+    margin-bottom:15px;
+    color:#00d2ff;
+}
+
+/* Contact */
+.muted{
+    opacity:.7;
+    font-size:1.1rem;
+}
+
+/* Footer */
+footer{
+    padding:60px;
+    text-align:center;
+    opacity:.5;
+}
+
+/* Mobile */
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding-top:120px;
+}
+
+.title{
+    font-size:3rem;
+}
+
+nav{
+    padding:18px 25px;
+}
+
+.links{
+    gap:12px;
+}
+
+.hero-card{
+    width:100%;
+    max-width:350px;
+}
+
+}
