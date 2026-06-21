@@ -4,109 +4,140 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bier_kasten</title>
-
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
   <script defer src="script.js"></script>
 </head>
 
 <body>
-
 <div id="progress"></div>
-<div id="particles-js"></div>
-<div class="overlay"></div>
+<div id="loader" class="loader">
+  <div class="loader-content">
+    <div class="loader-circle"></div>
+    <p>Laden...</p>
+  </div>
+</div>
+<div class="bg-gradient"></div>
 
-<!-- NAV -->
-<nav>
-  <div class="logo">Bier_kasten</div>
-  <div class="links">
-    <a href="#home">Home</a>
-    <a href="#socials">Socials</a>
-    <a href="#contact">Contact</a>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">Bier_kasten</div>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link">Startseite</a>
+      <a href="#socials" class="nav-link">Links</a>
+      <a href="#contact" class="nav-link">Kontakt</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </nav>
 
-<!-- HERO -->
-<section id="home" class="hero">
-
-  <div class="hero-text">
-    <h1 class="title">Hey, ich bin <span>Bier_kasten</span></h1>
-
-    <p class="subtitle">
-      hier findes du alle meine links
-    </p>
-
-    <div class="buttons">
-      <a href="#socials" class="btn">Explore</a>
-      <a href="#contact" class="btn ghost">Contact</a>
+<section id="home" class="hero-section">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="greeting">Willkommen in meinem Bereich</div>
+      <h1 class="title">Ich bin <span class="highlight">Bier_kasten</span></h1>
+      <p class="subtitle">Chill Streamer | Content Creator | Community Builder</p>
+      <p class="description">Finde alle meine Social Links und bleibe verbunden</p>
+      <div class="cta-buttons">
+        <a href="#socials" class="btn btn-primary">Links erkunden</a>
+        <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="profile-card">
+        <div class="card-glow"></div>
+        <img src="images/profile.png" alt="Profile">
+        <h3>Bier_kasten</h3>
+        <p>Chill Streamer</p>
+      </div>
     </div>
   </div>
-
-  <div class="hero-card">
-    <img src="images/profile.png">
-    <h3>Bier_kasten</h3>
-    <p>Chill streamer</p>
-  </div>
-
 </section>
 
-<!-- SOCIALS -->
-<section id="socials" class="section">
-  <h2>Socials</h2>
+<section id="socials" class="links-section">
+  <div class="section-container">
+    <h2 class="section-title">Verbinde dich mit mir</h2>
+    <p class="section-subtitle">Tritt meiner Community auf deinen Lieblings-Plattformen bei</p>
+    
+    <div class="links-grid">
+      <a class="social-card instagram" href="https://instagram.com/bier_kasten1" target="_blank">
+        <div class="card-bg"></div>
+        <i class="fa-brands fa-instagram"></i>
+        <h3>Instagram</h3>
+        <p>Folge für Updates</p>
+      </a>
 
-  <div class="grid">
+      <a class="social-card tiktok" href="https://tiktok.com/@bier_kasten1offical" target="_blank">
+        <div class="card-bg"></div>
+        <i class="fa-brands fa-tiktok"></i>
+        <h3>TikTok</h3>
+        <p>Kurze & unterhaltsame Inhalte</p>
+      </a>
 
-    <a class="card" href="instagram.com/bier_kasten1" target="_blank">
-      <i class="fa-brands fa-instagram"></i>
-      Instagram
-    </a>
+      <a class="social-card youtube" href="https://youtube.com/@bier_kasten1" target="_blank">
+        <div class="card-bg"></div>
+        <i class="fa-brands fa-youtube"></i>
+        <h3>YouTube</h3>
+        <p>Lange Videos</p>
+      </a>
 
-    <a class="card" href="tiktok.com/@bier_kasten1offical" target="_blank">
-      <i class="fa-brands fa-tiktok"></i>
-      TikTok
-    </a>
+      <a class="social-card discord" href="https://discord.com/aaynVUqbKk" target="_blank">
+        <div class="card-bg"></div>
+        <i class="fa-brands fa-discord"></i>
+        <h3>Discord</h3>
+        <p>Trete dem Server bei</p>
+      </a>
 
-    <a class="card" href="youtube.com/@bier_kasten1" target="_blank">
-      <i class="fa-brands fa-youtube"></i>
-      YouTube
-    </a>
+      <a class="social-card twitter" href="https://x.com/bier_kasten1off" target="_blank">
+        <div class="card-bg"></div>
+        <i class="fa-brands fa-x-twitter"></i>
+        <h3>Twitter (X)</h3>
+        <p>Tägliche Gedanken</p>
+      </a>
 
-    <a class="card" href="discord.com/aaynVUqbKk" target="_blank">
-      <i class="fa-brands fa-discord"></i>
-      Discord
-    </a>
+      <a class="social-card twitch" href="https://twitch.tv/bier_kasten1" target="_blank">
+        <div class="card-bg"></div>
+        <i class="fa-brands fa-twitch"></i>
+        <h3>Twitch</h3>
+        <p>Schau mir beim Streamen zu</p>
+      </a>
 
-    <a class="card" href="x.com/bier_kasten1off" target="_blank">
-      <i class="fa-brands fa-discord"></i>
-      twitter (X)
-    </a>
-	
-	    <a class="card" href="twitch.tv/bier_kasten1" target="_blank">
-      <i class="fa-brands fa-discord"></i>
-      twitch
-    </a>
-	
-	    <a class="card" href="roblox.com/users/2000630626/profile" target="_blank">
-      <i class="fa-brands fa-discord"></i>
-      Roblox
-    </a>
-	
-	    <a class="card" href="open.spotify.com/user/31hhyht7jbprerk44xwzip4egrbm?si=HIBNrD7-S7upbVjj_1L9RA" target="_blank">
-      <i class="fa-brands fa-discord"></i>
-      spotify
-    </a>
+      <a class="social-card roblox" href="https://roblox.com/users/2000630626/profile" target="_blank">
+        <div class="card-bg"></div>
+        <i class="fa-solid fa-gamepad"></i>
+        <h3>Roblox</h3>
+        <p>Gaming Profil</p>
+      </a>
 
+      <a class="social-card spotify" href="https://open.spotify.com/user/31hhyht7jbprerk44xwzip4egrbm" target="_blank">
+        <div class="card-bg"></div>
+        <i class="fa-brands fa-spotify"></i>
+        <h3>Spotify</h3>
+        <p>Meine Playlisten</p>
+      </a>
+    </div>
   </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="section-container">
+    <h2 class="section-title">Kontakt</h2>
+    <p class="section-subtitle">Hast du etwas zu sagen? Trete in Kontakt!</p>
+    <div class="contact-content">
+      <p>Zögere nicht, dich mit mir auf einer der Plattformen oben zu verbinden. Ich freue mich immer, mit meiner Community zu chatten!</p>
+    </div>
+  </div>
+</section>
 </section>
 
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section">
   <h2>Contact</h2>
   <p class="muted">bierkasten1@outlook.com</p>
